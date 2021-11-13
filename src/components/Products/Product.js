@@ -27,7 +27,7 @@ const Products = (props) => {
                         <p>{des}</p>
 
 
-                        <Link to={`/Purchase/${_id}`}><Button className="text-font"><FontAwesomeIcon icon={faShoppingCart} /> purchase Now </Button> </Link>
+                        <Link to={`/Purchase/${_id}`}><Button className="f-family"><FontAwesomeIcon icon={faShoppingCart} /> purchase Now </Button> </Link>
                     </div>
                 </div>
 

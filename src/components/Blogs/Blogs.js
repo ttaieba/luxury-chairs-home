@@ -18,7 +18,7 @@ const Blogs = () => {
                             <Card.Img variant="top" src={blog1} />
                             <h6 className="text-start" ><span className="blogs ">sep 9 </span>   <span className="ps-5 ms-5 ">Posted : kabir swifftsss</span></h6>
                             <Card.Body>
-                                <Card.Title className="text-color text-start">How Can I Choose A Comfortable Chair For My Drawing Room</Card.Title>
+                                <Card.Title className="text-color text-start">How Can I fix A Comfortable sitting tools </Card.Title>
                                 <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
 
                                 <Button className="text-font" variant="outline-warning">Read more</Button>
@@ -28,7 +28,7 @@ const Blogs = () => {
                     <Col>
                         <Card>
                             <Card.Img variant="top" src={blog2} />
-                            <h6 className="text-start" ><span className="blogs ">Nov 11 </span>   <span className="ps-5 ms-5 ">Posted : Elizabeth Barrett</span></h6>
+                            <h6 className="text-start" ><span className="blogs ">Nov 11 </span>   <span className="ps-5 ms-5 ">Posted : Elizabeth </span></h6>
 
                             <Card.Body>
                                 <Card.Title className="text-color text-start">Luxurious Furniture Aren't Expensive All The Time</Card.Title>
@@ -41,7 +41,7 @@ const Blogs = () => {
                     <Col>
                         <Card>
                             <Card.Img variant="top" src={blog3} />
-                            <h6 className="text-start" ><span className="blogs ">oct 12 </span>   <span className="ps-5 ms-5 ">Posted : Queen Alezabeth </span></h6>
+                            <h6 className="text-start" ><span className="blogs ">oct 12 </span>   <span className="ps-5 ms-5 ">Posted : Queen Ale </span></h6>
                             <Card.Body>
                                 <Card.Title className="text-color text-start">How To Decorate Your Living Room With Minimal Cost</Card.Title>
                                 <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>

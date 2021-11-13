@@ -29,10 +29,25 @@ body{
 
 }
 
+.f-family{
+  font-family: "Dancing Script";
+  
+}
+
 .text-font{
   font-family: "Dancing Script";
   color: rgb(0, 139, 54);
 }
+
+.logout-btn{
+  cursor: pointer;
+  margin-left: 380px;
+  margin-right: 20px;
+  height: 40px;
+  width: 100px;
+}
+
+
 
 
 /* bananr page----------------------- */

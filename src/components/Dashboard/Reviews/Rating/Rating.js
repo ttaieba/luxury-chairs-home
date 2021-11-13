@@ -6,6 +6,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 const Rating = () => {
     const [rating, setRating] = useState(null)
 
+    // https://polar-chamber-50247.herokuapp.com/
+    // https://polar-chamber-50247.herokuapp.com/products
 
     return (
         <div>
