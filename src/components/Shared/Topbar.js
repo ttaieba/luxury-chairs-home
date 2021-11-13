@@ -17,7 +17,7 @@ const Topbar = () => {
 
 
     return (
-        <div className=" mb-1 background-styl py-3 ">
+        <div className=" mb-3 background-styl">
 
 
 
@@ -25,39 +25,36 @@ const Topbar = () => {
                 <Container className="">
                     <Navbar.Brand href="#home"><img className="w-50" src={chair} alt="" /> </Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-start ">
+                    <Navbar.Collapse className="justify-content-end">
 
 
-                        <Nav.Link as={Link} className="text-white" to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} className="text-info" to="/home">Home</Nav.Link>
 
 
-                        <Nav.Link as={Link} className="text-white" to="/allproducts">Our Products</Nav.Link>
+                        <Nav.Link as={Link} className="text-info" to="/allproducts">Our Products</Nav.Link>
 
                         {/* -------------Need accesss------ */}
 
                         {user?.email ? <div className="d-flex">
 
-                            <Nav.Link as={Link} className="text-white" to="/dashboard"> Dashboard</Nav.Link>
+                            <Nav.Link as={Link} className="text-info" to="/dashboard"> Dashboard</Nav.Link>
 
-
-                            <Button onClick={logout} className=" logout-btn" variant="light"> Logout</Button>
-
-
+                            <Button onClick={logout} className="me-3" variant="light"><FontAwesomeIcon className="text-info " icon={faUser} /> Logout</Button>
 
                         </div>
 
                             :
-                            <Nav.Link as={Link} className="text-white" to="/login"> Login</Nav.Link>
+                            <Nav.Link as={Link} className="text-info" to="/login"> Login</Nav.Link>
 
 
 
                         }
-                        <Navbar.Text className="text-dark ms-2">
-                            <a className="text-info" href="#login"><FontAwesomeIcon className="text-info " icon={faUser} /> {user.email}</a>
+
+
+                        <Navbar.Text className="text-dark">
+                            <a className="text-info" href="#login">{user.email}</a>
 
                         </Navbar.Text>
-
-
                     </Navbar.Collapse>
 
                 </Container>

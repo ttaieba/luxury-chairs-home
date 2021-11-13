@@ -12,7 +12,7 @@ const Products = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://polar-chamber-50247.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
 

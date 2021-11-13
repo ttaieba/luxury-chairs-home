@@ -13,7 +13,7 @@ const ManageOrder = () => {
 
     // get all---------------------
     useEffect(() => {
-        fetch(`http://localhost:5000/orderManagment`)
+        fetch(`https://polar-chamber-50247.herokuapp.com/orderManagment`)
             .then((res) => res.json())
             .then((data) => setOrderManagment(data));
     }, []);
@@ -26,7 +26,7 @@ const ManageOrder = () => {
     // update status for order--------------
     const onSubmit = (data) => {
 
-        fetch(`http://localhost:5000/status/${orderId}`, {
+        fetch(`https://polar-chamber-50247.herokuapp.com/status/${orderId}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -41,7 +41,7 @@ const ManageOrder = () => {
         const confirm = window.confirm('Are you want to delet user?');
 
         if (confirm) {
-            fetch(`http://localhost:5000/orderManagment/${id}`,
+            fetch(`https://polar-chamber-50247.herokuapp.com/orderManagment/${id}`,
                 { method: 'DELETE' })
                 .then(res => res.json())
                 .then(data => {

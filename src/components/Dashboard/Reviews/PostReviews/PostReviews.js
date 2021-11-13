@@ -9,7 +9,7 @@ const PostReviews = () => {
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
 
-        fetch(`http://localhost:5000/Addreviews`, {
+        fetch(`https://polar-chamber-50247.herokuapp.com/Addreviews`, {
             method: "post",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

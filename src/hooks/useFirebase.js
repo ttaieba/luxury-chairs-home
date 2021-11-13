@@ -89,12 +89,7 @@ const useFirebase = () => {
         });
     }, [])
     // -----------------------
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setAdmin(data.admin))
-    // }, [user?.email])
-    // -----------------
+
 
     const logout = () => {
         setIsLoading(true)
@@ -107,7 +102,7 @@ const useFirebase = () => {
     }
     const saveuser = (email) => {
         const user = { email }
-        fetch('http://localhost:5000/users', {
+        fetch('https://polar-chamber-50247.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

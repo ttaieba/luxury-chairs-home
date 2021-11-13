@@ -18,7 +18,7 @@ const Purchase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${id}`)
+        fetch(`https://polar-chamber-50247.herokuapp.com/purchase/${id}`)
             .then(res => res.json())
             .then(data => SetPurchase(data))
 
@@ -35,7 +35,7 @@ const Purchase = () => {
         // orders
 
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://polar-chamber-50247.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

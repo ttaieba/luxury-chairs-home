@@ -7,7 +7,7 @@ const ManageProduct = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allproducts')
+        fetch('https://polar-chamber-50247.herokuapp.com/allproducts')
             .then(res => res.json())
             .then(data => {
 
@@ -23,7 +23,7 @@ const ManageProduct = () => {
         if (confirm) {
 
 
-            fetch(`http://localhost:5000/allproducts/${id}`, {
+            fetch(`https://polar-chamber-50247.herokuapp.com/allproducts/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
