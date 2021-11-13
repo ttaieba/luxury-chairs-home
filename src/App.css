@@ -1,38 +1,130 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+  font-family: 'Montserrat', sans-serif;
+  
+}
+/* font-family: 'Dancing Script', cursive; */
+*{
+  list-style: none;
+  text-decoration: none;
+  
+}
+
 .App {
   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* common style -----------------*/
+
+.background-styl{
+  background-color: rgb(50, 100, 79);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-color{
+  color: #16536b;
+  
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-font{
+  font-family: "Dancing Script";
+  color: rgb(0, 139, 54);
 }
 
-.App-link {
-  color: #61dafb;
+
+/* bananr page----------------------- */
+.bannar{
+  background-image: url(./img/banner1.png);
+  background-position: center center;
+  background-size: cover;
+  font-family: "Dancing Script";
+  color: rgb(0, 139, 54);
+  
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* login form style--------------------- */
+
+.login{
+  box-shadow: 2px 2px 2px 2px rgb(107, 105, 100);
+  border-radius: 20px;
+  width: 400px;
+  height: 500px;
+  margin: 5% auto;
+  padding: 10% 5%;
+  background-image: url(./img/shape3.png);
+
 }
+
+
+input{
+  border:none ;
+  margin-right: 10px;
+  border-bottom: 1px solid rgb(87, 88, 88);
+  width: 300px;
+  
+}
+/* purchse------------- */
+.form-styl{
+  
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  
+  height: 500px;
+
+}
+
+
+
+/* card style--------------------------- */
+
+.card-style:hover{
+ 
+  -ms-transform: rotate(7deg); 
+   -webkit-transform: rotate(7deg); 
+   transform: rotate(7deg);
+   transition:transform 1s ;
+  
+}
+.images{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+/* -------------------------------- */
+
+.review{
+  box-shadow: 2px 2px 2px 2px rgb(107, 105, 100);
+  border-radius: 20px;
+  
+  height: 230px;
+  margin: 5% auto;
+  padding: 10% 5%;
+  
+
+}
+
+/* -------------------------------- */
+.blogs{
+  background-color: lightgrey;
+  border: 1px solid grey;
+ border-radius: 50%;
+ padding: 10px;
+}
+  
+
+
+input[type="radio"]{
+  display: none;
+}
+
+.star{
+  cursor: pointer;
+  transition: color 200;
+}
+
+
