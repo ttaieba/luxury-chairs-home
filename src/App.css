@@ -74,6 +74,15 @@ body{
   background-image: url(./img/shape3.png);
 
 }
+/* -------------------- */
+.bacground{
+  
+  background-color: darkgrey;
+
+
+}
+
+
 
 
 input{
@@ -103,6 +112,9 @@ input{
    -webkit-transform: rotate(7deg); 
    transform: rotate(7deg);
    transition:transform 1s ;
+   background-color: rgb(182, 179, 141);
+   box-shadow: 2px 2px 2px 2px rgb(107, 105, 100);
+
   
 }
 .images{

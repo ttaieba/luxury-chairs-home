@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Form, Row } from 'react-bootstrap';
 import payment from '../../img/payment1.png'
 import payment1 from '../../img/payment2.png'
 import payment2 from '../../img/payment3.png'
@@ -16,13 +16,25 @@ const Footer = () => {
                 <Col>
 
                     <h3>Luxury Charis Home</h3>
-                    <p>WELCOME TO our shop </p>
+                    <p>Contact us: </p>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Your email" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                            <Form.Label>Your text</Form.Label>
+                            <Form.Control as="textarea" rows={3} />
+                            <button className="btn-danger">Submit</button>
+                        </Form.Group>
+                    </Form>
+
                     <p>Explore our world class Collections </p>
                     <br />
                     <img className="p-1" src={payment} alt="" />
                     <img className="p-1" src={payment1} alt="" />
                     <img className="p-1" src={payment2} alt="" />
-                    <img className="p-1" src={payment3} alt="" />
+                    {/* <img className="p-1" src={payment3} alt="" /> */}
 
                 </Col>
                 <Col>
@@ -52,10 +64,14 @@ const Footer = () => {
 
 
 
+
+
+
+
                         <h4>Get in touch</h4>
-                        <p> Jln Cempaka Wangi No 22, <br /> Jakarta - Indonesia</p>
+                        <p> Telephone Enquiry: (012) 345 6789</p>
                         <p>contact@Gmail.Com</p>
-                        <p>+(62)21 2002-2012</p>
+                        <p>Email: demo@example.com</p>
                         <br /><br />
 
                         <p> Open : 8:00 AM - Close : 18:00 PM</p>

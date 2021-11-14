@@ -72,9 +72,7 @@ const Dashboard = () => {
                             <li className=" text-start  ">Pay</li>
                         </Link>
 
-                        <Link to={`${url}/myOrders`}>
-                            <li className=" text-start  " >MyOrders</li>
-                        </Link>
+
 
                         <Link to={`${url}/review`}>
                             <li className="text-start">Review</li>
@@ -98,9 +96,7 @@ const Dashboard = () => {
                         <Route exact path={path}>
                             <MyOrders></MyOrders>
                         </Route>
-                        <Route exact path={`${path}/myOrders`}>
-                            <MyOrders></MyOrders>
-                        </Route>
+
 
                         {/* ------------------------ */}
                         <Route exact path={`${path}/pay`}>

@@ -56,9 +56,9 @@ const ManageProduct = () => {
 
                             <Row className="g-1 ">
                                 <Col xs={2} md={6}>
-                                    <img className="w-100" src={product?.img} alt="" />
+                                    <img className="w-100 card-style" src={product?.img} alt="" />
                                     <h6>{product?.name}</h6>
-                                    <h5 >  :${product?.price}</h5>
+                                    <h5 >  ${product?.price}</h5>
                                 </Col>
 
 

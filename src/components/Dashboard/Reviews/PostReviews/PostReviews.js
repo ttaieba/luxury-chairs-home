@@ -30,11 +30,11 @@ const PostReviews = () => {
 
     return (
         <div>
-            <h1 className="text-color">Leave Your Reviews Here </h1>
+            <h1 className="text-color text-font">Leave Your Reviews Here </h1>
 
 
 
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmit)} className="login">
 
                 <input Value={user.displayName} className="m-2" {...register("name")} />
                 <br />

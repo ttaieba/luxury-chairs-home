@@ -10,50 +10,71 @@ const Blogs = () => {
         <div className="p-5">
             <Container>
 
-                <h1 className="text-color">  Read Latest Our News</h1>
+                <h1 className="text-color text-font">  Read Latest Our News</h1>
 
                 <Row xs={1} lg={3} className="g-4">
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={blog1} />
-                            <h6 className="text-start" ><span className="blogs ">sep 9 </span>   <span className="ps-5 ms-5 ">Posted : kabir swifftsss</span></h6>
-                            <Card.Body>
-                                <Card.Title className="text-color text-start">How Can I fix A Comfortable sitting tools </Card.Title>
-                                <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
+                            <Row xs={12} className="py-3" >
+                                <Col xs={6} md={6} className="py-3">
 
-                                <Button className="text-font" variant="outline-warning">Read more</Button>
-                            </Card.Body>
+                                    <Card.Img variant="top" src={blog1} />
+                                    <h6 className="text-start ps-3 " >  <br /> <br /> Posted : kabir molla </h6></Col>
+                                <Col>
+                                    <h5 className="text-color text-start">How To Decorate Your Living Room With Minimal Cost</h5>
+                                    <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
+
+                                    <Button className="text-font" variant="outline-warning">Read more</Button>
+
+                                </Col>
+                            </Row>
+
                         </Card>
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={blog2} />
-                            <h6 className="text-start" ><span className="blogs ">Nov 11 </span>   <span className="ps-5 ms-5 ">Posted : Elizabeth </span></h6>
+                            <Row xs={12} className="py-3" >
+                                <Col xs={6} md={6} className="py-3">
 
-                            <Card.Body>
-                                <Card.Title className="text-color text-start">Luxurious Furniture Aren't Expensive All The Time</Card.Title>
-                                <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
+                                    <Card.Img variant="top" src={blog2} />
+                                    <h6 className="text-start ps-3 " >  <br /> <br /> Posted : Elizabeth </h6></Col>
+                                <Col>
+                                    <h5 className="text-color text-start">Luxurious Furniture Aren't Expensive All The Time you can get </h5>
+                                    <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
 
-                                <Button className="text-font" variant="outline-warning">Read more</Button>
-                            </Card.Body>
+                                    <Button className="text-font" variant="outline-warning">Read more</Button>
+
+                                </Col>
+                            </Row>
+
+
                         </Card>
                     </Col>
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={blog3} />
-                            <h6 className="text-start" ><span className="blogs ">oct 12 </span>   <span className="ps-5 ms-5 ">Posted : Queen Ale </span></h6>
-                            <Card.Body>
-                                <Card.Title className="text-color text-start">How To Decorate Your Living Room With Minimal Cost</Card.Title>
-                                <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
+                            <Row xs={12} className="py-3" >
+                                <Col xs={6} md={6} className="py-3">
 
-                                <Button className="text-font" variant="outline-warning">Read more</Button>
-                            </Card.Body>
+                                    <Card.Img variant="top" src={blog3} />
+                                    <h6 className="text-start ps-3 " >  <br /> <br /> Posted : Queen Ale </h6></Col>
+                                <Col>
+                                    <h5 className="text-color text-start">How To Decorate Your Living Room With Minimal Cost</h5>
+                                    <p>Dream about Buying New Furniture is a signal for joy, celebration and festivities...</p>
+
+                                    <Button className="text-font" variant="outline-warning">Read more</Button>
+
+                                </Col>
+                            </Row>
+
+
+
+
                         </Card>
                     </Col>
 
                 </Row>
             </Container>
-        </div>
+        </div >
     );
 };
 

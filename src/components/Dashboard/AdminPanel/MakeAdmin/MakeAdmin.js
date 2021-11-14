@@ -11,7 +11,7 @@ const MakeAdmin = () => {
     const handleOnBlur = e => {
         setEmail(e.target.value);
     }
-    const handleMakeAdmin = e => {
+    const handleCreateAdmin = e => {
         const user = { email };
         fetch('https://polar-chamber-50247.herokuapp.com/admin', {
             method: 'PUT',
@@ -34,18 +34,20 @@ const MakeAdmin = () => {
     }
     return (
         <div>
-            <h2>Make an Admin</h2>
-            <form onSubmit={handleMakeAdmin}>
+            <h2>Create an Admin</h2>
+            <form onSubmit={handleCreateAdmin} className="login">
 
                 <input
-
+                    placeholder="Enter a Email"
                     label="Email"
                     type="email"
                     onBlur={handleOnBlur}
                 />
                 <br />
                 <br />
-                <Button type="submit" className="btn-prymary" >Make Admin</Button>
+                <Button type="submit" className="btn-success" >Create Admin</Button>
+
+
             </form>
 
         </div>

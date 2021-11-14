@@ -82,8 +82,8 @@ const Purchase = () => {
                                 <Col xs={12} md={12} >
 
 
-                                    <h5>Order details</h5>
-                                    <input className=" w-75 " defaultValue={purchase?.img}   {...register("img")} placeholder="Img url" />
+
+                                    <input className=" w-75 " defaultValue={purchase?.img}   {...register("img")} />
                                     <br /><br />
                                     <input className=" w-75 " Value={purchase?.name} {...register("Productname")} /> <br /> <br />
 
