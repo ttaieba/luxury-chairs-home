@@ -6,15 +6,16 @@
 This project is bootstrapped with [Create React App]
 use its won database as mongodb
 
-
+it will be update later..........
 
 _In the project directory, you can run:_
 
 #  Visit the live link"
 
 you can browse it by click here.\
-Open [https://assinment-12.web.app/](https://assinment-12.web.app/) to view it in the browser.
-`https://assinment-12.web.app/`
+Open [https://assinment-12.web.app/](https://assinment-12.web.app/) to view it in the browser. or visit here:
+[https://assinment-12.firebaseapp.com/]
+disable link: `https://assinment-12.web.app/`
 The page will reload if you make edits.\
 You will also see any link errors in the console.
 
@@ -26,7 +27,7 @@ You will also see any link errors in the console.
  - react app
  - React Bootstraps for scc framework
  - Fontwasome for icon library
- - font family Monserrat 
+ - font family Dancing scripts and defaled 
  - database :mongodb with node js & Express.
  - secure setup
 
