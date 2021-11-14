@@ -55,7 +55,7 @@ const Purchase = () => {
     return (
         <div>
             <Container className="mt-4 p-4 fluid">
-                <h6>{user.email}</h6>
+                <h6>{user.displayName}</h6>
                 <Row className="g-4">
 
 

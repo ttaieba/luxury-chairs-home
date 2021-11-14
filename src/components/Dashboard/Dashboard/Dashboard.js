@@ -10,6 +10,7 @@ import Pay from './Payment/Pay';
 import ManageProduct from '../AdminPanel/ManageProduct/ManageProduct';
 import useAuth from '../../../hooks/useAuth';
 
+
 // -----------------links------------------------------
 
 const Dashboard = () => {
@@ -65,8 +66,13 @@ const Dashboard = () => {
                     {!isAdmin && <div>
 
                         <Link to={`${url}`}>
-                            <li className=" text-start  mt-5">My Order</li>
+                            <li className=" text-start  mt-5"></li>
                         </Link>
+
+                        <Link to={`${url}/myOrders`}>
+                            <li className=" text-start  " >MyOrders</li>
+                        </Link>
+
 
                         <Link to={`${url}/pay`}>
                             <li className=" text-start  ">Pay</li>
@@ -98,10 +104,16 @@ const Dashboard = () => {
                         </Route>
 
 
+
                         {/* ------------------------ */}
                         <Route exact path={`${path}/pay`}>
                             <Pay></Pay>
                         </Route>
+
+                        <Route exact path={`${path}/myOrders`}>
+                            <MyOrders></MyOrders>
+                        </Route>
+
                         <Route exact path={`${path}/review`}>
                             <PostReviews></PostReviews>
                         </Route>

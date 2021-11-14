@@ -27,7 +27,7 @@ You will also see any link errors in the console.
  - react app
  - React Bootstraps for scc framework
  - Fontwasome for icon library
- - font family Dancing scripts and defaled 
+ - font family Dancing scripts and monsserat 
  - database :mongodb with node js & Express.
  - secure setup
 
