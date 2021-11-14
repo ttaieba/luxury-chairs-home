@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { AuthContext } from "../Context/AuthProvider"
 
-// ------------------------links
-//  coustoms hook
+// ------------links------------
+
 const useAuth = () => {
 
 

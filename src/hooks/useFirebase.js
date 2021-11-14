@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, signOut } from "firebase/auth";
-
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, onAuthStateChanged, signOut } from "firebase/auth";
 import initializeAthentication from "../Firebase/Firebase.init";
 
-// imported------------------------------------------
+// ----------------import links------------------------
 
 initializeAthentication()
 
@@ -11,85 +10,68 @@ initializeAthentication()
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [isLoading, setIsLoading] = useState(true)
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
     const [error, setError] = useState("")
     const [admin, setAdmin] = useState(false)
 
 
     const auth = getAuth();
 
-
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
-
-    const handlePassword = (e) => {
-
-        if (e.target.value.length < 6) {
-            setError("password should be more than 6")
-        } else {
-            setPassword(e.target.value)
-            setError("")
-        }
-    }
-
-    const handleLogin = (e) => {
+    // -------------------------------------------
+    const handleUserLogin = (email, password, location, history) => {
         setIsLoading(true);
-        e.preventDefault()
         signInWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-
-
-
-                setUser(result.user)
-                setError("")
-
+            .then((userCredential) => {
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                setError('');
             })
             .catch((error) => {
-
-                const errorMessage = error.message;
-                setError(errorMessage)
-                setIsLoading(false);
-            });
+                setError(error.message);
+            })
+            .finally(() => setIsLoading(false));
     }
-    const handdleSubmit = (e,) => {
-        setIsLoading(true)
-        e.preventDefault()
+
+    // -------------------------------------------------
+    const handdleRegister = (name, email, password, history) => {
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
+            .then((userCredential) => {
+                setError('');
+                const newUser = { email, displayName: name };
+                setUser(newUser);
+                saveuser(email, name);
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                }).then(() => {
+                }).catch((error) => {
+                });
 
-                setUser(result.user)
-                saveuser(email)
-
+                history.replace('/');
             })
             .catch((error) => {
-
-                const errorMessage = error.message;
-
-                setError(errorMessage)
-                setIsLoading(false)
-            });
-
+                setError(error.message);
+                console.log(error);
+            })
+            .finally(() => setIsLoading(false));
     }
+
+
 
     // ------------------Email Athentication-----------------
 
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
-
-                setUser(user)
+                setUser(user);
             } else {
-                // User is signed out
-                // ...
+                setUser({})
             }
-            setIsLoading(false)
+            setIsLoading(false);
         });
+        return () => unsubscribed;
     }, [])
-    // -----------------------
-
+    // 
 
     const logout = () => {
         setIsLoading(true)
@@ -100,8 +82,8 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
 
     }
-    const saveuser = (email) => {
-        const user = { email }
+    const saveuser = (email, displayName) => {
+        const user = { email, displayName }
         fetch('https://polar-chamber-50247.herokuapp.com/users', {
             method: 'POST',
             headers: {
@@ -124,16 +106,14 @@ const useFirebase = () => {
 
     }
 
-    // ---------------singout end------------------------------------
+    // ---------------return--------------------------
     return {
         user,
         admin,
         isLoading,
         error,
-        handleEmail,
-        handlePassword,
-        handleLogin,
-        handdleSubmit,
+        handleUserLogin,
+        handdleRegister,
         logout
     }
 

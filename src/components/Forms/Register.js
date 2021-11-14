@@ -1,15 +1,36 @@
-import React, { } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Button, Col, Container, Row, Spinner } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
-// --------imported--------------------------
+// --------links--------------------------
 
 
 const Register = () => {
 
-    const { handdleSubmit, handleEmail, handlePassword, user } = useAuth()
+    const { handdleRegister, user, isLoading } = useAuth()
+    const [loginInfo, setLoginInfo] = useState({})
+    const history = useHistory();
 
+    const handleOnBlur = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginInfo = { ...loginInfo };
+        newLoginInfo[field] = value;
+        setLoginInfo(newLoginInfo);
+        // console.log(newLoginInfo)
+    }
+
+    const handleregisterSubmit = e => {
+        if (loginInfo.password !== loginInfo.repassword) {
+            alert('password not matched')
+            return
+        }
+
+        handdleRegister(loginInfo?.name, loginInfo?.email, loginInfo?.password, history);
+
+        e.preventDefault();
+    }
 
 
 
@@ -19,40 +40,65 @@ const Register = () => {
     // -----------------------------------
 
     return (
-        <div className="text-center p-4 my-5">
+        <div>
+            <Container className="my-5 py-5">
+                <Row>
+                    <Col
+                        sx={12}>
+                        <h1 className="text-color p-4">Please Register</h1>
+                        <div className="login">
+                            {user?.email && <h5 className="text-success">{user.email}</h5>}
 
-            <h1 className="mb-4 text-color">
-                Register Here
-            </h1>
-            <div className="login">
-                <h4 className="mb-4">{user.email}</h4>
+                            {!isLoading && <form onSubmit={handleregisterSubmit}>
+                                <input
+                                    onBlur={handleOnBlur}
+                                    type="text"
+                                    placeholder="Your Name "
+                                    name="name"
+                                    id="" />
+                                <br />
+                                <br />
+                                <input
+                                    onBlur={handleOnBlur}
+                                    type="email"
+                                    placeholder="email "
+                                    name="email"
+                                    id="" />
+                                <br />
+                                <br />
+                                <input
+                                    onBlur={handleOnBlur}
+                                    type="password"
+                                    placeholder="password"
+                                    name="password"
+                                    id="" />
+                                <br /><br />
+
+                                <input
+                                    onChange={handleOnBlur}
+                                    type="password"
+                                    placeholder="Re type password"
+                                    name="repassword"
+                                    id="" />
+                                <br /><br />
+                                <Button type="submit" className="px-4 m-2 btn-primary">Register</Button>
+
+                                <br />
+                                <br />
+
+                            </form>}
+                            {isLoading && <Spinner animation="border" variant="success" />}
+
+                            <Link to="/login" className="text-primary my-4"> registered?please Login</Link>
 
 
+                        </div>
 
 
-                <form onSubmit={handdleSubmit} >
+                    </Col>
+                </Row>
 
-
-                    <input onChange={handleEmail} type="email" placeholder="Your Email " name="" id="" />
-                    <br />
-                    <br />
-                    <input onChange={handlePassword} type="password" placeholder="Password" name="" id="" />
-                    <br /><br />
-
-
-
-                    <Button type="submit">Register</Button>
-                    <br /><br />
-                </form>
-                {/* end */}
-
-
-                {/* toggole text you can go login form  */}
-
-                <Link to="/login" className="text-primary py-4">Already registered? please login</Link>
-            </div>
-
-
+            </Container>
         </div >
     );
 };

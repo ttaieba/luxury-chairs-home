@@ -1,18 +1,19 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Redirect, Route } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
-// -------------------------links
+// ------------------links---------------
 
 const PrivateRoute = ({ children, ...rest }) => {
     const { user, isLoading } = useAuth();
 
 
 
-    // reloade issue--------
+    //  stay with page after loading-----
 
     if (isLoading) {
-        return (" wait a second............")
+        return (<Spinner animation="border" variant="success" />)
     }
 
     return (

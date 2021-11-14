@@ -1,11 +1,11 @@
 import React, { createContext } from 'react';
 import useFirebase from '../hooks/useFirebase';
 
-// LInks------------------------------
+// -------------links-----------------
 
 
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
     const allcontext = useFirebase()
@@ -17,5 +17,5 @@ const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
-// use it for all
+
 export default AuthProvider;

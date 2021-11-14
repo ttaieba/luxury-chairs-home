@@ -28,23 +28,23 @@ const Topbar = () => {
                     <Navbar.Collapse className="justify-content-end">
 
 
-                        <Nav.Link as={Link} className="text-info" to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} className="text-white" to="/home">HOME</Nav.Link>
 
 
-                        <Nav.Link as={Link} className="text-info" to="/allproducts">Our Products</Nav.Link>
+                        <Nav.Link as={Link} className="text-white" to="/allproducts">OUR PRODUCTS</Nav.Link>
 
                         {/* -------------Need accesss------ */}
 
                         {user?.email ? <div className="d-flex">
 
-                            <Nav.Link as={Link} className="text-info" to="/dashboard"> Dashboard</Nav.Link>
+                            <Nav.Link as={Link} className="text-white" to="/dashboard"> DASHBOARD</Nav.Link>
 
                             <Button onClick={logout} className="me-3" variant="light"><FontAwesomeIcon className="text-info " icon={faUser} /> Logout</Button>
 
                         </div>
 
                             :
-                            <Nav.Link as={Link} className="text-info" to="/login"> Login</Nav.Link>
+                            <Nav.Link as={Link} className="text-white" to="/login"> LOGIN</Nav.Link>
 
 
 
@@ -52,7 +52,7 @@ const Topbar = () => {
 
 
                         <Navbar.Text className="text-dark">
-                            <a className="text-info" href="#login">{user.email}</a>
+                            <a className="text-info" href="#login">{user.displayName}</a>
 
                         </Navbar.Text>
                     </Navbar.Collapse>
