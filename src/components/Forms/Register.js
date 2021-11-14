@@ -32,9 +32,9 @@ const Register = () => {
         e.preventDefault();
     }
 
+    // ---------------------------------------
 
-
-
+    // no need to register at admin@admin as new. because it already register as admin . you only login with this email//
 
 
     // -----------------------------------
