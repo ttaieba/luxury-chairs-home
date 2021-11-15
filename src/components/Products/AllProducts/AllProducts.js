@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import Topbar from '../../Shared/Topbar';
 import Product from '../Product';
 // ------------------------links------------
 
@@ -21,6 +22,7 @@ const AllProducts = () => {
 
     return (
         <div>
+            <Topbar></Topbar>
             <Container >
                 <div className="py-4 text-color">
 

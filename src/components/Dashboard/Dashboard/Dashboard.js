@@ -9,6 +9,7 @@ import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
 import Pay from './Payment/Pay';
 import ManageProduct from '../AdminPanel/ManageProduct/ManageProduct';
 import useAuth from '../../../hooks/useAuth';
+import DashboardHome from './DashboardHome';
 
 
 // -----------------links------------------------------
@@ -36,7 +37,7 @@ const Dashboard = () => {
     return (
         <div>
 
-            <Row>
+            <Row xs={12} md={6}>
                 <Col md={2} className="bg-light text-color p-4">
                     <h2 className="bg-white">Dashboard</h2>
 
@@ -47,18 +48,20 @@ const Dashboard = () => {
 
 
                         <Link to={`${url}/addProducts`}>
-                            <li className="text-start">Add Products</li>
+                            <h5 className="text-start py-2 ">Add Products</h5>
                         </Link>
 
+
                         <Link to={`${url}/manageProduct`}>
-                            <li className="text-start">Manage Product</li>
+                            <h5 className="text-start py-2 ">Manage Product</h5>
                         </Link>
 
                         <Link to={`${url}/makeAdmin`}>
-                            <li className="text-start">Make Admin</li>
+                            <h5 className="text-start py-2 ">Make Admin</h5>
                         </Link>
+
                         <Link to={`${url}/manageOrder`}>
-                            <li className="text-start">Manage Order</li>
+                            <h5 className="text-start py-2 ">Manage Order</h5>
                         </Link>
                     </div>}
 
@@ -66,23 +69,24 @@ const Dashboard = () => {
                     {!isAdmin && <div>
 
                         <Link to={`${url}`}>
-                            <li className=" text-start  mt-5"></li>
+                            <h5 className=" text-start py-4  mt-5"> Menu</h5>
                         </Link>
 
                         <Link to={`${url}/myOrders`}>
-                            <li className=" text-start  " >MyOrders</li>
+                            <h5 className=" text-start py-2 " >MyOrders</h5>
                         </Link>
 
 
                         <Link to={`${url}/pay`}>
-                            <li className=" text-start  ">Pay</li>
+                            <h5 className=" text-start py-2 ">Pay</h5>
                         </Link>
 
 
 
                         <Link to={`${url}/review`}>
-                            <li className="text-start">Review</li>
+                            <h5 className="text-start py-2">Review</h5>
                         </Link>
+
                     </div>}
 
 
@@ -92,6 +96,7 @@ const Dashboard = () => {
                     {/* onClick={logout} */}
 
                     <Button onClick={logout} className="me-3" variant="light">Logout</Button>
+                    <Link to="/home"><Button variant="light" > Home </Button> </Link>
 
                 </Col>
                 <Col md={10} >
@@ -100,7 +105,7 @@ const Dashboard = () => {
                     <Switch>
                         {/* -------User dashboard-------- */}
                         <Route exact path={path}>
-                            <MyOrders></MyOrders>
+                            <DashboardHome></DashboardHome>
                         </Route>
 
 

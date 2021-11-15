@@ -28,7 +28,7 @@ function App() {
       <AuthProvider>
 
         <Router>
-          <Topbar></Topbar>
+
           {/* ------------------------------ */}
           <Switch>
             <Route exact path="/">

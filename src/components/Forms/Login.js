@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Row, Col, Container, Button, Spinner } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import Topbar from '../Shared/Topbar';
 
 
 // ------------ links--------------------
@@ -32,7 +33,7 @@ const Login = () => {
 
     return (
         <div >
-
+            <Topbar></Topbar>
 
             <Container className="my-5 py-5">
                 <Row>

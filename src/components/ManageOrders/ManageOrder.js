@@ -72,6 +72,8 @@ const ManageOrder = () => {
                                 <th>Email</th>
                                 <th>Products </th>
                                 <th>Status </th>
+                                <th>Delete </th>
+
                             </tr>
                         </thead>
 
@@ -98,13 +100,13 @@ const ManageOrder = () => {
                                                 <option value={order?.status}>{order?.status}</option>
                                                 <option value="shipped ">shipped </option>
                                             </select>
-                                            <input type="submit" />
+                                            <input className="w-50 text-font" type="submit" />
                                         </form>
                                     </td>
 
+                                    <td><Button onClick={() => handleuserDelete(order?._id)}
+                                        variant="outline-danger">delete</Button></td>
 
-                                    <Button onClick={() => handleuserDelete(order?._id)}
-                                        variant="outline-danger">delete</Button>
                                 </tr>
 
 

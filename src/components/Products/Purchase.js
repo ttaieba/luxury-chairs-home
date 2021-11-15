@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import Topbar from '../Shared/Topbar';
 
 // // -------------------links----------------------
 
@@ -54,6 +55,7 @@ const Purchase = () => {
 
     return (
         <div>
+            <Topbar></Topbar>
             <Container className="mt-4 p-4 fluid">
                 <h6>{user.displayName}</h6>
                 <Row className="g-4">
@@ -65,7 +67,7 @@ const Purchase = () => {
                     <Col xs={12} md={6} className="" >
 
                         <div>
-                            <img className="w-50" src={purchase?.img} alt="" />
+                            <img className="w-50 py-4 purchase" src={purchase?.img} alt="" />
                         </div>
                         <div className="">
                             <h4>$: {purchase?.price}</h4>

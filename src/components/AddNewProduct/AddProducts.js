@@ -26,7 +26,7 @@ const AddProducts = () => {
     }
 
     return (
-        <div className="bacground py-3 ">
+        <div className="bacground py-5 m-5 ">
             <h1 className="text-color">Add a  Product</h1>
 
 
