@@ -1,10 +1,11 @@
-# Website name Luxury Chairs Home 
-<img src="./src/img/chair logo.png title="Brand logo"/>
----
- This website  property is all about " Luxury Chairs Home"
+# Luxury Chairs Home- Full Stack website
 
-This project is bootstrapped with [Create React App]
-use its won database as mongodb
+---
+ ###	Every user can visit Home page and product page easily. Only Login user can place order and cancel the order, also give a feedback.    
+###	 An admin can manage all order, added a new product, deleted product ,make another admin and updated status   
+###	 Loaded Dynamic data from Mongo DB with CRUD operation.
+###	Fully responsive with mobile, tab, and desktop version. User friendly website.
+
 
 it will be update later..........
 
@@ -23,7 +24,7 @@ You will also see any link errors in the console.
 
 
 
-# What we use for make this site?
+# Technology used:
  - react app
  - React Bootstraps for scc framework
  - Fontwasome for icon library
@@ -31,18 +32,10 @@ You will also see any link errors in the console.
  - database :mongodb with node js & Express.
  - secure setup
 
-# Code source
-to get the code link visit the private github link.
+# Hosting
 
-added it's won server 'MongoDB'
-
-# Deployment
-
-### Hosting and Deployment patner is __"Google Firebase"__
+### client site Hosting __"Google Firebase"__
 ### server hosting __"Heroku"__
 
-### Developer 
-| Name | Email |
-| -----| ------|
 
-😊😊😊😊😊😊😊😊😊😊😊
+
